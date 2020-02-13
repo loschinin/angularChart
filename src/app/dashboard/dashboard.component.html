@@ -1,0 +1,38 @@
+
+<div class="page-header">
+    <h3>Weather Dashboard. All Charts</h3>
+    <mat-form-field>
+      <mat-label>Sort by date of research </mat-label>
+      <mat-select>
+        <mat-option (click)="sortChartOld()" value="option1">Old</mat-option>
+        <mat-option (click)="sortChartNew()" value="option2">New</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Select sensor </mat-label>
+      <mat-select>
+        <mat-option (click)="selectTemperature()" value="option1">Temperature</mat-option>
+        <mat-option (click)="selectWind()" value="option2">Wind</mat-option>
+        <mat-option (click)="selectHumidity()" value="option3">Humidity</mat-option>
+        <mat-option (click)="selectLight()" value="option4">Light</mat-option>
+        <mat-option (click)="selectAllSingle()" value="option5">Show All</mat-option>
+      </mat-select>
+    </mat-form-field>    
+    
+</div>
+<mat-divider></mat-divider>
+<div class="grid-wrapper">
+  <div *ngFor="let d of data">
+    
+    <app-chart [data]="d" [title]="d.name" [year]="d.year"></app-chart>
+    
+  </div>
+</div>
+
+<!--  
+
+
+
+
+  
+ " -->

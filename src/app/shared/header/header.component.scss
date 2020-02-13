@@ -1,0 +1,19 @@
+mat-toolbar {
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: fixed;
+  z-index: 2;
+  .spacer {
+    flex: 1 1 auto;
+  }
+  .sm-spacer {
+    width: 1rem;
+  }
+  a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+  }
+}
+
+
+  
+

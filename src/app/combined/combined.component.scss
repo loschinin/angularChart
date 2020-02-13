@@ -1,0 +1,16 @@
+highcharts-chart {
+    padding-top: 10rem;
+    height: 25rem;
+    width: 100%;
+    display: block;
+} 
+
+mat-form-field {
+    margin: 1rem 0.5rem 0 0.5rem;
+    width: 5rem;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}

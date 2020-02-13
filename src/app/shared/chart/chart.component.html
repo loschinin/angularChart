@@ -1,0 +1,18 @@
+
+<mat-form-field>
+  <mat-label>Type </mat-label>
+  <mat-select>
+    <mat-option (click)="setTypeBar()" value="option1">Bar</mat-option>
+    <mat-option (click)="setTypeLine()" value="option2">Line</mat-option>
+    <mat-option (click)="setTypeArea()" value="option2">Area</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Theme </mat-label>
+  <mat-select>
+    <mat-option (click)="setColorDark()" value="option1">Dark</mat-option>
+    <mat-option (click)="setColorLight()" value="option2">Light</mat-option>
+  </mat-select>
+</mat-form-field>
+<highcharts-chart [Highcharts]="Highcharts" [options]="chartOptions" [(update)]="updateFlag"></highcharts-chart>
+

@@ -1,0 +1,18 @@
+<mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-sidenav fxHide.gt-xs="true" fxLayout="column" mode="side" [opened]="sidenavOpen">
+        <div fxLayout="column">           
+
+            <a routerLinkActive="mat-accent" routerLink="/" mat-button [routerLinkActiveOptions]="{exact: true}">Dashboard</a>
+            <a routerLinkActive="mat-accent" routerLink="/combined" mat-button>Combined Chart</a>
+            <a routerLinkActive="mat-accent" routerLink="/about" href="#" mat-button>About us</a>
+        </div>
+    </mat-sidenav>
+    
+    <mat-sidenav-content fxFlexFill>
+
+        <router-outlet></router-outlet>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<!--   -->

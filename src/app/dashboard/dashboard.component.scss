@@ -1,0 +1,29 @@
+.page-header {
+  width: 100%;
+  padding-top: 64px;
+  height: 8rem;  
+
+  h3 {
+    padding: 3rem 2rem 0 2rem;
+    color: rgb(19, 19, 19);
+    font-size: 24px;    
+  }
+  mat-form-field {
+    margin: 0 2rem;
+  }
+  
+}
+mat-divider {
+    margin-top: 7rem;
+  }
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1200px) {
+    .grid-wrapper {
+    grid-template-columns: 1fr;
+
+  }
+}
