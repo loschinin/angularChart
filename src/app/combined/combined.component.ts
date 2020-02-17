@@ -13,7 +13,7 @@ export class CombinedComponent implements OnInit {
   updateFlag: boolean = false;
 
   constructor(private mainService: MainService) { }
-  
+
 
   ngOnInit(): void {
     this.chartOptions = {
@@ -22,8 +22,8 @@ export class CombinedComponent implements OnInit {
         backgroundColor: {
           linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
           stops: [
-            [0, '#2a2a2b'],
-            [1, '#3e3e40']
+            [0, 'LightGray'],
+            [1, 'Gainsboro']
           ]
         },
         style: {
@@ -38,7 +38,7 @@ export class CombinedComponent implements OnInit {
         text: 'All sensors',
         style: {
           color: 'LightSlateGrey',
-          fontSize: '15px'
+          fontSize: '20px'
         }
       },
 
@@ -48,9 +48,9 @@ export class CombinedComponent implements OnInit {
         }
       },
       legend: {
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
         itemStyle: {
-          color: '#E0E0E3'
+          color: '#ffffff'
         },
         itemHoverStyle: {
           color: '#FFF'

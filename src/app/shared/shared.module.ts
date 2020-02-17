@@ -21,16 +21,16 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     HeaderComponent,
     FooterComponent,
     ChartComponent,
-    SidenavComponent
+    SidenavComponent    
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule,
-    RouterModule,
+    MatButtonModule,    
     HighchartsChartModule,
     MatSelectModule,
     MatGridListModule,

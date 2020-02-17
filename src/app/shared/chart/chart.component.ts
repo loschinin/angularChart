@@ -10,11 +10,11 @@ import * as Highcharts from 'highcharts';
 
 
 export class ChartComponent implements OnInit {
-  Highcharts = Highcharts; 
+  Highcharts = Highcharts;
   chartOptions: {}
   @Input() title: string = ''
   @Input() year: number
-  @Input() data 
+  @Input() data
   updateFlag: boolean = false;
 
   constructor() { }
@@ -65,8 +65,8 @@ export class ChartComponent implements OnInit {
         backgroundColor: {
           linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
           stops: [
-            [0, '#2a2a2b'],
-            [1, '#3e3e40']
+            [0, 'LightGray'],
+            [1, 'Gainsboro']
           ]
         },
         style: {
@@ -133,7 +133,7 @@ export class ChartComponent implements OnInit {
           color: 'white'
         }
       },
-// SERIES 
+      // SERIES 
       series: [this.data],
       credits: {
         enabled: false
@@ -189,7 +189,7 @@ export class ChartComponent implements OnInit {
           }
         }]
       }
-    }; 
+    };
   }
 
 }
