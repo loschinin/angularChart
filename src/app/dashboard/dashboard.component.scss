@@ -9,7 +9,8 @@
     font-size: 24px;    
   }
   mat-form-field {
-    margin: 0 2rem;
+    margin: 0 1rem;
+    width: 7rem;
   }
   
 }
@@ -26,4 +27,12 @@ mat-divider {
     grid-template-columns: 1fr;
 
   }
+}
+
+
+
+
+/////////////////
+.example-form-field {
+  width: 200px;
 }

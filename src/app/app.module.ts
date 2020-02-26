@@ -9,7 +9,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { SharedModule } from './shared/shared.module';
-
+import { FormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MainService } from './main.service';
 import { MatSelectModule } from '@angular/material/select';
@@ -18,6 +18,9 @@ import { MatDividerModule } from '@angular/material/divider';
 import { CombinedComponent } from './combined/combined.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 
@@ -40,7 +43,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatToolbarModule,
     MatDividerModule,
     MatSidenavModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatIconModule    
   ],
   providers: [MainService],
   bootstrap: [AppComponent]

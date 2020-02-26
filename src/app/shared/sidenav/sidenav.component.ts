@@ -13,7 +13,7 @@ export class SidenavComponent implements OnInit {
   
 
   ngOnInit(): void {
-    console.log(this.sidenavOpen)
+    //console.log(this.sidenavOpen)
 
   }
 

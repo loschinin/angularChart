@@ -15,6 +15,7 @@ export class ChartComponent implements OnInit {
   @Input() title: string = ''
   @Input() year: number
   @Input() data
+  @Input() categories: string[]
   updateFlag: boolean = false;
 
   constructor() { }
@@ -76,12 +77,19 @@ export class ChartComponent implements OnInit {
         plotBorderColor: '#606063'
       },
       title: {
-        text: this.title + ' (created at ' + this.year + ')',
+        text: this.title,
         style: {
           color: 'LightSlateGrey',
           fontSize: '15px'
         }
       },
+      xAxis: {
+        categories: this.categories,
+        tickmarkPlacement: 'on',
+        title: {
+            enabled: false
+        }
+    },
       yAxis: {
         title: {
           enabled: false
@@ -112,7 +120,7 @@ export class ChartComponent implements OnInit {
           label: {
             connectorAllowed: false
           },
-          pointStart: 2000,
+          /* pointStart: 0, */
           dataLabels: {
             color: '#F0F0F3',
             style: {

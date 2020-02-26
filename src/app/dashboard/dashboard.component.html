@@ -1,30 +1,50 @@
 
 <div class="page-header">
     <h3>Weather Dashboard. All Charts</h3>
+
+
     <mat-form-field>
-      <mat-label>Sort by date of research </mat-label>
-      <mat-select>
-        <mat-option (click)="sortChartOld()" value="option1">Old</mat-option>
-        <mat-option (click)="sortChartNew()" value="option2">New</mat-option>
-      </mat-select>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label>Select sensor </mat-label>
-      <mat-select>
+      <mat-label>Select sensor</mat-label>
+      <mat-select value="option5">
         <mat-option (click)="selectTemperature()" value="option1">Temperature</mat-option>
         <mat-option (click)="selectWind()" value="option2">Wind</mat-option>
         <mat-option (click)="selectHumidity()" value="option3">Humidity</mat-option>
         <mat-option (click)="selectLight()" value="option4">Light</mat-option>
         <mat-option (click)="selectAllSingle()" value="option5">Show All</mat-option>
       </mat-select>
-    </mat-form-field>    
+    </mat-form-field> 
+
+    <!-- <mat-form-field>
+      <mat-label>Select start year</mat-label>
+      <mat-select value="2015">
+        <mat-option (click)="onChange()" [value]="option2015">{{2015}}</mat-option>
+        <mat-option value="option2">2012</mat-option>
+      </mat-select>
+    </mat-form-field>  -->
+    
+    <mat-form-field class="example-form-field">
+      <mat-label>Start year</mat-label>
+      <input matInput type="text" [(ngModel)]="startValue" (change)="onChange()">
+      <button mat-button *ngIf="startValue" matSuffix mat-icon-button aria-label="Clear" (click)="startValue=null">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>  
+    <mat-form-field class="example-form-field">
+      <mat-label>End year</mat-label>
+      <input matInput type="text" [(ngModel)]="endValue" (change)="onChange()">
+      <button mat-button *ngIf="endValue" matSuffix mat-icon-button aria-label="Clear" (click)="endValue=null">
+        <mat-icon>close</mat-icon>
+      </button>      
+    </mat-form-field>
+      
+   
     
 </div>
 <mat-divider></mat-divider>
 <div class="grid-wrapper">
   <div *ngFor="let d of data">
     
-    <app-chart [data]="d" [title]="d.name" [year]="d.year"></app-chart>
+    <app-chart [data]="d" [title]="d.name" [categories]="d.categories"></app-chart>
     
   </div>
 </div>
