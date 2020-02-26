@@ -12,6 +12,7 @@ export class CombinedComponent implements OnInit {
   chartOptions: {}
   updateFlag: boolean = false;
 
+
   constructor(private mainService: MainService) { }
 
 
@@ -41,7 +42,13 @@ export class CombinedComponent implements OnInit {
           fontSize: '20px'
         }
       },
-
+      xAxis: {
+        categories: this.mainService.categories,
+        tickmarkPlacement: 'on',
+        title: {
+            enabled: false
+        }
+    },
       yAxis: {
         title: {
           enabled: false
@@ -73,7 +80,7 @@ export class CombinedComponent implements OnInit {
           label: {
             connectorAllowed: false
           },
-          pointStart: 2000,
+          /* pointStart: 2000, */
           dataLabels: {
             color: '#F0F0F3',
             style: {
@@ -98,31 +105,19 @@ export class CombinedComponent implements OnInit {
       series: [
         {
           name: 'Temperature',
-          data: this.mainService.temp,
-          year: 2019,
-          visible: true,
-          showInLegend: true
+          data: this.mainService.temp
         },
         {
           name: 'Wind',
-          data: this.mainService.wind,
-          year: 2017,
-          visible: true,
-          showInLegend: true
+          data: this.mainService.wind
         },
         {
           name: 'Light',
-          data: this.mainService.light,
-          year: 2020,
-          visible: true,
-          showInLegend: true
+          data: this.mainService.light
         },
         {
           name: 'Humidity',
-          data: this.mainService.humidity,
-          year: 2016,
-          visible: true,
-          showInLegend: true
+          data: this.mainService.humidity
         }
       ],
       credits: {

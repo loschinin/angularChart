@@ -2,8 +2,9 @@
 <div class="page-header">
     <h3>Weather Dashboard. All Charts</h3>
 
-
-    <mat-form-field>
+    <h4>Here you can select sensor</h4>
+    <mat-form-field class="select-sensor-form-field">
+      
       <mat-label>Select sensor</mat-label>
       <mat-select value="option5">
         <mat-option (click)="selectTemperature()" value="option1">Temperature</mat-option>
@@ -14,28 +15,23 @@
       </mat-select>
     </mat-form-field> 
 
-    <!-- <mat-form-field>
-      <mat-label>Select start year</mat-label>
-      <mat-select value="2015">
-        <mat-option (click)="onChange()" [value]="option2015">{{2015}}</mat-option>
-        <mat-option value="option2">2012</mat-option>
-      </mat-select>
-    </mat-form-field>  -->
-    
-    <mat-form-field class="example-form-field">
+    <mat-divider *ngIf="showHide"></mat-divider>
+    <h4>Here you can filter all charts by year</h4>
+    <mat-form-field *ngIf="showHide" class="year-form-field">      
       <mat-label>Start year</mat-label>
-      <input matInput type="text" [(ngModel)]="startValue" (change)="onChange()">
+      <input matInput type="number" [min]="startMin" [max]="startMax" ng-pattern="/^1234$/" [(ngModel)]="startValue" (change)="onChange()">
       <button mat-button *ngIf="startValue" matSuffix mat-icon-button aria-label="Clear" (click)="startValue=null">
         <mat-icon>close</mat-icon>
       </button>
     </mat-form-field>  
-    <mat-form-field class="example-form-field">
+    <mat-form-field *ngIf="showHide" class="year-form-field">
       <mat-label>End year</mat-label>
-      <input matInput type="text" [(ngModel)]="endValue" (change)="onChange()">
+      <input matInput type="number" [min]="endMin" [max]="endMax" ng-pattern="/^1234$/" [(ngModel)]="endValue" (change)="onChange()">      
       <button mat-button *ngIf="endValue" matSuffix mat-icon-button aria-label="Clear" (click)="endValue=null">
         <mat-icon>close</mat-icon>
       </button>      
     </mat-form-field>
+
       
    
     

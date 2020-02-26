@@ -54,5 +54,7 @@ export class MainService {
   light = this.fakeApiData[2].data
   humidity = this.fakeApiData[3].data
 
+  categories = this.fakeApiData[0].categories
+
 }
 

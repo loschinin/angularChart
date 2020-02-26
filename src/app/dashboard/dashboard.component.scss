@@ -1,38 +1,41 @@
 .page-header {
   width: 100%;
   padding-top: 64px;
-  height: 8rem;  
+  height: 10%;
 
   h3 {
-    padding: 3rem 2rem 0 2rem;
+    padding: 3rem 2rem;
     color: rgb(19, 19, 19);
-    font-size: 24px;    
+    font-size: 1.5rem;
   }
   mat-form-field {
     margin: 0 1rem;
-    width: 7rem;
   }
-  
+  h4 {
+    padding: 1rem;
+    color: rgb(19, 19, 19);
+    font-size: 0.9rem;
+  }
 }
+
 mat-divider {
-    margin-top: 7rem;
-  }
-  .grid-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  margin: 2rem 0;
+}
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 @media (max-width: 1200px) {
-    .grid-wrapper {
+  .grid-wrapper {
     grid-template-columns: 1fr;
-
   }
 }
 
+.select-sensor-form-field {
+  width: 7rem;
+}
 
-
-
-/////////////////
-.example-form-field {
-  width: 200px;
+.year-form-field {
+  width: 4.5rem;
 }
