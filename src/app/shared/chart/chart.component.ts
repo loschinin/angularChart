@@ -80,7 +80,7 @@ export class ChartComponent implements OnInit {
         text: this.title,
         style: {
           color: 'LightSlateGrey',
-          fontSize: '15px'
+          fontSize: '2rem'
         }
       },
       xAxis: {
@@ -124,7 +124,7 @@ export class ChartComponent implements OnInit {
           dataLabels: {
             color: '#F0F0F3',
             style: {
-              fontSize: '13px'
+              fontSize: '1rem'
             }
           },
           marker: {

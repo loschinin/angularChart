@@ -1,5 +1,4 @@
 highcharts-chart {
-    padding-top: 10rem;
     height: 25rem;
     width: 100%;
     display: block;
@@ -13,4 +12,10 @@ mat-form-field {
 .grid-wrapper {
     display: grid;
     grid-template-columns: 1fr;
+}
+
+h3 {
+    padding: 7rem 2rem;
+    color: rgb(19, 19, 19);
+    font-size: 1.5rem;
 }

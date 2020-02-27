@@ -1,12 +1,17 @@
 highcharts-chart {
-    height: 15rem;
-    width: 100%;
-    display: block;
-    
-    
-} 
+  height: 22rem;
+  width: 100%;
+  display: inline-flex;
+  
+}
 mat-form-field {
-    margin: 1rem 0.5rem 0 0.5rem;
-    width: 5rem;
+  margin: 1rem 0.5rem 0 0.5rem;
+  width: 5rem;
+  font-size: 1rem;
 }
 
+@media (max-width: 500px) {
+  mat-form-field {
+    font-size: 1.5rem;
+  }
+}

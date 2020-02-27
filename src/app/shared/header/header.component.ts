@@ -19,6 +19,11 @@ export class HeaderComponent implements OnInit {
       this.menu = 'close' :
       this.menu = 'menu'
     //console.log(this.menu)
+    setTimeout(() => {
+      window.dispatchEvent(
+        new Event('resize')
+      )
+    }, 300)
   }
 
 
