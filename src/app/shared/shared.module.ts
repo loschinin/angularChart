@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -9,12 +8,14 @@ import { RouterModule } from '@angular/router';
 import { ChartComponent } from './chart/chart.component';
 import { HighchartsChartModule } from 'highcharts-angular'
 import { MatSelectModule } from '@angular/material/select';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './sidenav/sidenav.component';
+
+/* import { BrowserModule } from '@angular/platform-browser';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { CommonModule } from '@angular/common'; */
 
 @NgModule({
   declarations: [
@@ -24,18 +25,19 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     SidenavComponent    
   ],
   imports: [
-    RouterModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    CommonModule,
+    RouterModule,    
+    BrowserAnimationsModule,    
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,    
     HighchartsChartModule,
-    MatSelectModule,
-    MatGridListModule,
+    MatSelectModule,    
     FlexLayoutModule,
-    MatSidenavModule
+    MatSidenavModule,
+
+    //MatGridListModule,
+    //CommonModule,
+    //BrowserModule,
   ],
   exports: [
     HeaderComponent,
