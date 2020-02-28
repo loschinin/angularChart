@@ -13,10 +13,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './sidenav/sidenav.component';
 
-/* import { BrowserModule } from '@angular/platform-browser';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { CommonModule } from '@angular/common'; */
-
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -33,11 +29,7 @@ import { CommonModule } from '@angular/common'; */
     HighchartsChartModule,
     MatSelectModule,    
     FlexLayoutModule,
-    MatSidenavModule,
-
-    //MatGridListModule,
-    //CommonModule,
-    //BrowserModule,
+    MatSidenavModule
   ],
   exports: [
     HeaderComponent,

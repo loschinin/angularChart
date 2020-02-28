@@ -74,11 +74,6 @@ export class DashboardComponent implements OnInit {
     if (this.endValue >= 2020) { this.end = 11; this.endValue = 2020 }
 
     if (this.startValue < this.endValue) {
-
-
-                 
-      
-
       this.filteredData = this.incomingData.map(d =>
         ({
           name: d.name,
@@ -92,28 +87,29 @@ export class DashboardComponent implements OnInit {
     }
   }
 
-
-  selectTemperature() {     
+  selectTemperature() {
     this.data = this.filteredData.filter(d => d.name === 'Temperature')
-    this.showHide = false  
+    this.showHide = false
+  }
 
-  }
-  selectWind() {        
+  selectWind() {
     this.data = this.filteredData.filter(d => d.name === 'Wind')
-    this.showHide = false    
-    
+    this.showHide = false
   }
+
   selectHumidity() {
     this.data = this.filteredData.filter(d => d.name === 'Humidity')
     this.showHide = false
   }
+
   selectLight() {
     this.data = this.filteredData.filter(d => d.name === 'Light')
     this.showHide = false
   }
+
   selectAllSingle() {
-    this.data = this.filteredData    
-    this.showHide = true    
+    this.data = this.filteredData
+    this.showHide = true
   }
 
 
