@@ -69,11 +69,7 @@ export class ChartComponent implements OnInit {
             [0, 'LightGray'],
             [1, 'Gainsboro']
           ]
-        },
-        style: {
-          fontFamily: '\'Unica One\', sans-serif',
-          size: null
-        },
+        },        
         plotBorderColor: '#606063'
       },
       title: {
@@ -87,9 +83,9 @@ export class ChartComponent implements OnInit {
         categories: this.categories,
         tickmarkPlacement: 'on',
         title: {
-            enabled: false
+          enabled: false
         }
-    },
+      },
       yAxis: {
         title: {
           enabled: false
@@ -142,7 +138,7 @@ export class ChartComponent implements OnInit {
         }
       },
       // SERIES 
-      series: [this.data],
+      series: [this.data],      
       credits: {
         enabled: false
       },
@@ -167,36 +163,7 @@ export class ChartComponent implements OnInit {
           }
         }
       },
-      responsive: {
-        rules: [{
-          condition: {
-            maxWidth: 400
-          },
-          chartOptions: {
-            legend: {
-              align: 'center',
-              verticalAlign: 'bottom',
-              layout: 'horizontal'
-            },
-            yAxis: {
-              labels: {
-                align: 'left',
-                x: 0,
-                y: -5
-              },
-              title: {
-                text: null
-              }
-            },
-            subtitle: {
-              text: null
-            },
-            credits: {
-              enabled: false
-            }
-          }
-        }]
-      }
+
     };
   }
 

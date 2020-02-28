@@ -3,6 +3,7 @@
   <div class="filter-block">
     <div>
       <h4>Here you can select sensor</h4>
+      
       <mat-form-field class="select-sensor-form-field">
         <mat-label>Select sensor</mat-label>
         <mat-select value="option5">
@@ -13,10 +14,11 @@
           <mat-option (click)="selectAllSingle()" value="option5">Show All</mat-option>
         </mat-select>
       </mat-form-field>
+      <h5 *ngIf="!showHide">To change period select Show All</h5>
     </div>
 
     <div>
-      <h4 *ngIf="showHide">Here you can filter all charts by year</h4>
+      <h4 *ngIf="showHide">Here you can filter All charts by year</h4>
       <mat-form-field *ngIf="showHide" class="year-form-field">
         <mat-label>Start year</mat-label>
         <input matInput type="number" [min]="startMin" [max]="startMax" ng-pattern="/^1234$/" [(ngModel)]="startValue"

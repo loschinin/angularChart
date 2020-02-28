@@ -4,7 +4,7 @@
   height: 10%;
 
   h3 {
-    padding: 3rem 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     color: rgb(19, 19, 19);
     font-size: 1.5rem;
   }
@@ -17,10 +17,16 @@
     color: rgb(19, 19, 19);
     font-size: 1rem;
   }
+  h5 {
+    padding: 0.5rem 1rem;
+    color: #673ab7;
+    font-size: 0.7rem;
+  }
 }
 .filter-block {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 3fr;
+  background-color: white;
   font-size: 1rem;
   .select-sensor-form-field {
     width: 10rem;
